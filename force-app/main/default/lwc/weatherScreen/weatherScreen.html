@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Weather Information Details ">
+        <div class="">
+            <lightning-input type="text" label="Enter City Name" placeholder="e.g Noida, Mumbai....." onchange={handleInputChnage}></lightning-input>
+        </div>
+        <div>
+            <lightning-button label="Weather lado Bhaiya" onclick={handleClick}></lightning-button>
+        </div>
+
+    <template lwc:if={showDetails}>
+        <div class="c-container">
+            <lightning-layout horizontal-align="spread" multiple-rows>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-title_bold">city: {WaetherDetails.city}</span>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <span class="slds-text-title_bold">Temp: {WaetherDetails.temp}</span>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <span class="slds-text-title_bold">Pressure: {WaetherDetails.pressure}</span>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <span class="slds-text-title_bold">Temp Min: {WaetherDetails.tempmin}</span>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <span class="slds-text-title_bold">Temp Max: {WaetherDetails.tempmax}</span>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <span class="slds-text-title_bold">humadity: {WaetherDetails.humadity}</span>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </template>
+</lightning-card>
+</template>
